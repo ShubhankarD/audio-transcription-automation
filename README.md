@@ -11,21 +11,21 @@ This project automates audio transcription using the Whisper ASR model. It split
 
 ## Installation
 
-1.  Install the required Python packages:
+1. Install the required Python packages:
 
     ```bash
-    pip install whisper pydub
+    pip install -r requirements.txt
     ```
 
-2.  Ensure that `ffmpeg` is installed and available in your system's PATH.
+2. Ensure that `ffmpeg` is installed and available in your system's PATH.
 
-    -   For macOS, you can install it using Homebrew:
+    - For macOS, you can install it using Homebrew:
 
         ```bash
         brew install ffmpeg
         ```
 
-    -   For Debian-based Linux distributions:
+    - For Debian-based Linux distributions:
 
         ```bash
         sudo apt update
@@ -34,24 +34,20 @@ This project automates audio transcription using the Whisper ASR model. It split
 
 ## Usage
 
-1.  Modify the script's configuration section:
+1. Modify the configuration in `src/config.py`:
 
-    -   `audio_path`: Path to the input audio file.
-    -   `chunk_length_ms`: Length of each audio chunk in milliseconds.
-    -   `language`: Language of the audio.
+    - `audio_path`: Path to the input audio file.
+    - `chunk_length_ms`: Length of each audio chunk in milliseconds.
+    - `language`: Language of the audio.
 
-2.  Run the script:
+2. Run the transcription script:
 
     ```bash
-    python "Whishper Automation.py"
+    python src/audio_transcriber.py
     ```
 
-3.  The transcribed text will be saved to `transcription_output.txt`.
+3. The transcribed text will be saved to `transcription_output.txt`.
 
 ## Configuration
 
-```python
-audio_path = "/Users/sdash029/Downloads/test audio.mp3"  # Path to the input audio file
-chunk_length_ms = 60 * 1000  # Length of each audio chunk in milliseconds (default: 60 seconds)
-language = "hi"  # Language of the audio
-```
+Refer to `src/config.py` for configuration settings such as the audio file path, chunk length, and language.
