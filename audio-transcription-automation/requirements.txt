@@ -1,0 +1,3 @@
+whisper
+pydub
+ffmpeg-python
